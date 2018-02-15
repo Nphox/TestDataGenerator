@@ -48,5 +48,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\EnglishWord.txt" />
+    <Content Include="Files\FemaleNames.txt" />
+    <Content Include="Files\MaleNames.txt" />
+    <Content Include="Files\patronymic.txt" />
+    <Content Include="Files\surnames.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
