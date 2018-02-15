@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace TestDataGenerator.Data
 {
-    class UserEntity
+    public class UserEntity
     {
+        public string Name { get; set; }
+        public string Surename { get; set; }
+        public string Patronymic { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public DateTime RegistrationDate { get; set; }
     }
 }
