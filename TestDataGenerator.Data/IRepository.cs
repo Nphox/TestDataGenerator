@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TestDataGenerator.Data
 {
-    interface IRepository
+    public interface IRepository
     {
+        void Init();
+        string GetRandomName();
+        string GetRandomSurename();
+        string GetRandomPatronymic();
+        string GetRandomUniqLogin();
     }
 }
