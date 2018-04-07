@@ -47,9 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptGeneratorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestDataGenerator.BL\TestDataGenerator.BL.csproj">
+      <Project>{067EDC10-84E0-4C2A-90DB-D324B858AB05}</Project>
+      <Name>TestDataGenerator.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestDataGenerator.Data\TestDataGenerator.Data.csproj">
+      <Project>{5361eb9e-9696-422f-a84a-bdbe9285eff0}</Project>
+      <Name>TestDataGenerator.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
