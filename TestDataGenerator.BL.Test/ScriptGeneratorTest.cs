@@ -94,5 +94,15 @@ namespace TestDataGenerator.BL.Test
 
             Assert.That(result, Is.EqualTo(EXPECTED_RESULT));
         }
+
+        [Test]
+        public void GenerateUser_GetInsertLine()
+        {
+            const string EXPECTED_RESULT = @"INSERT INTO BlogUser (Name, Surename, Patronymic, Email, Login, Password, RegistrationDate)";
+
+            string result = _generator.GetInsertLine();
+
+            Assert.That(result, Is.EqualTo(EXPECTED_RESULT));
+        }
     }
 }
