@@ -74,5 +74,25 @@ namespace TestDataGenerator.BL.Test
 
             Assert.That(registrationDate, Is.InRange(new DateTime(2010, 1, 1), new DateTime(2016, 2, 29)));
         }
+
+        [Test]
+        public void GenerateUser_GetValueLine()
+        {
+            UserEntity user = new UserEntity()
+            {
+                Name = "Петр",
+                Surename = "Петов",
+                Patronymic = "Петрович",
+                Email = "petr@gmail.com",
+                Login = "petr",
+                Password = "12345",
+                RegistrationDate = new DateTime(2016, 1, 1)
+            };
+            const string EXPECTED_RESULT = @"VALUES('Петр', 'Петов', 'Петрович', 'petr@gmail.com', 'petr', '12345', '20160101')";
+
+            string result = _generator.GetValueLine(user);
+
+            Assert.That(result, Is.EqualTo(EXPECTED_RESULT));
+        }
     }
 }
