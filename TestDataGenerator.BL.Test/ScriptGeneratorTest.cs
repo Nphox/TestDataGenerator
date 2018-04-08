@@ -65,5 +65,14 @@ namespace TestDataGenerator.BL.Test
 
             Assert.That(email, Is.Not.Empty);
         }
+
+        [Test]
+        public void GenerateUser_RegistrationDatePeriod()
+        {
+            UserEntity entity = _generator.GenerateUser();
+            DateTime registrationDate = entity.RegistrationDate;
+
+            Assert.That(registrationDate, Is.InRange(new DateTime(2010, 1, 1), new DateTime(2016, 2, 29)));
+        }
     }
 }
